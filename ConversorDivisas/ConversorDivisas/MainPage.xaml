@@ -1,24 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ConversorDivisas.MainPage">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ConversorDivisas.MainPage">
+    <StackLayout
+        BackgroundColor="LightGreen">
+        <Label
+            Text="DivisApp 22002759"
+            HorizontalOptions="Center"
+            FontSize="Title"
+            FontAttributes="Bold"
+            VerticalOptions="CenterAndExpand" />
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame
+            BackgroundColor="White"
+            CornerRadius="10"
+            Padding="40"
+            HorizontalOptions="Center"
+            VerticalOptions="StartAndExpand">
+            <StackLayout>
+                <Image
+                    Source="https://i.ibb.co/r3m7Rvp/quetzal.png" 
+                    Margin="0, 0, 0, 20" />
+
+                <Label
+                    Text="Introduce la cantidad en quetzales"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" 
+                    FontSize="Medium"
+                    Margin="0, 0, 0, 20" />
+
+                <Entry
+                    x:Name="inputQuetzales"
+                    Keyboard="Numeric"
+                    Margin="0, 0, 0, 80"
+                    VerticalOptions="CenterAndExpand" />
+
+                <Button
+                    Text="Convertir quetzales a dólares"
+                    CornerRadius="15"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    BackgroundColor="GreenYellow"
+                    Margin="0, 0, 0, 20"
+                    x:Name="btnConvertir"
+                    Clicked="btnConvertir_Clicked" />
+
+                <StackLayout
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Resultado."
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        FontSize="Medium"
+                        Margin="0, 0, 0, 20" />
+
+                    <Label
+                        x:Name="lblResultado"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        Margin="0, 0, 0, 20"
+                        FontSize="Medium"
+                        Text="0" />
+                </StackLayout>
+            </StackLayout>
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
     </StackLayout>
-
 </ContentPage>
